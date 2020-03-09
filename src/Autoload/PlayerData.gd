@@ -7,7 +7,7 @@ signal reset
 
 var score: = 0 setget set_score
 var deaths: = 0 setget set_deaths
-
+var new_score
 
 func reset():
 	self.score = 0
@@ -17,10 +17,9 @@ func reset():
 
 func set_score(new_score: int) -> void:
 	score = new_score
-	score = 5
 	emit_signal("updated")
 
 
 func set_deaths(new_value: int) -> void:
-	deaths = new_score
+	deaths = new_value
 	emit_signal("died")
